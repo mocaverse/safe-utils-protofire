@@ -6,7 +6,14 @@ export function Footer() {
     <footer className="py-4 w-full flex items-center justify-center">
       <div className="container flex items-center justify-center">
         <p className="text-center text-sm text-black dark:text-white flex items-center gap-2 flex-wrap justify-center">
-          Developed with <Heart className="h-4 w-4" /> by{" "}
+          This is a
+          <a
+            href="https://github.com/protofire/safe-utils/tree/production"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-black dark:text-white underline underline-offset-4 hover:text-black/80 dark:hover:text-white/80"
+          >forked
+          </a>version of Safe Utils website. Source is developed by{" "}
           <a
             href="https://www.openzeppelin.com/"
             target="_blank"
@@ -15,7 +22,7 @@ export function Footer() {
           >
             OpenZeppelin
           </a>
-          / Subject to our{" "}
+          {/* / Subject to our{" "}
           <a
             href="https://www.openzeppelin.com/tos"
             target="_blank"
@@ -23,7 +30,7 @@ export function Footer() {
             className="font-medium text-black dark:text-white underline underline-offset-4 hover:text-black/80 dark:hover:text-white/80"
           >
             Terms of Service
-          </a>
+          </a> */}
           / Script by{" "}
           <a
             href="https://github.com/pcaversaccio"

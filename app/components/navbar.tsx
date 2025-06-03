@@ -46,255 +46,255 @@ const Navbar: React.FC = () => {
 
   // Define navigation structure
   const navMenus: Record<string, NavMenu> = {
-    products: {
-      name: 'Products',
-      sections: [
-        {
-          title: 'Open Source Tools',
-          items: [
-            {
-              id: 'contracts_library-navbar',
-              title: 'Contracts Library',
-              href: 'https://www.openzeppelin.com/solidity-contracts',
-              description: 'Secure smart contract templates',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/contracts-library-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/contracts-library-dark.svg'
-              }
-            },
-            {
-              id: 'contracts_wizard-navbar',
-              title: 'Contracts Wizard',
-              href: 'https://wizard.openzeppelin.com/',
-              target: '_blank',
-              description: 'Interactive smart contract generator',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/contracts-wizard-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/wizard-dark.svg'
-              }
-            },
-            {
-              id: 'upgrades_plugin-navbar',
-              title: 'Upgrades Plugin',
-              href: 'https://docs.openzeppelin.com/upgrades-plugins/1.x/',
-              target: '_blank',
-              description: 'Safe and easy smart contract upgrades',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/upgrade-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/upgrades-dark.svg'
-              }
-            }
-          ]
-        },
-        {
-          title: 'Defender Cloud Services',
-          href: 'https://www.openzeppelin.com/defender',
-          items: [
-            {
-              id: 'relayers-navbar',
-              title: 'Relayers',
-              href: 'https://www.openzeppelin.com/defender#secure-operations',
-              description: 'Send reliable transactions via API',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/relayers-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/relayers-dark.svg'
-              }
-            },
-            {
-              id: 'monitor-navbar',
-              title: 'Monitor',
-              href: 'https://www.openzeppelin.com/defender#secure-operations',
-              description: 'Gain visibility into your smart contracts',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/monitor-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/monitor-dark.svg'
-              }
-            },
-            {
-              id: 'actions-navbar',
-              title: 'Actions',
-              href: 'https://www.openzeppelin.com/defender#actions',
-              description: 'Automate smart contract operations',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/actions-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/actions-dark.svg'
-              }
-            },
-            {
-              id: 'access_control-navbar',
-              title: 'Access Control',
-              href: 'https://access-manager.openzeppelin.com/explorer/11155111',
-              target: '_blank',
-              description: 'Manage contract roles and permissions',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/access-control-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/acces-control-dark.svg'
-              }
-            }
-          ]
-        },
-        {
-          title: '',
-          items: [
-            {
-              id: 'code_inspector-navbar',
-              title: 'Code Inspector',
-              href: 'https://www.openzeppelin.com/defender#secure-code',
-              description: 'Find and resolve smart contract vulnerabilities',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/code-inspector-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/code-inspector-dark.svg'
-              }
-            },
-            {
-              id: 'deploy-navbar',
-              title: 'Deploy',
-              href: 'https://www.openzeppelin.com/defender#secure-deploy',
-              description: 'Launch and upgrade smart contracts safely',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/deploy-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/deploy-dark.svg'
-              }
-            },
-            {
-              id: 'transaction_proposals-navbar',
-              title: 'Transaction Proposals',
-              href: 'https://www.openzeppelin.com/defender#secure-operations',
-              description: 'Interactive transaction builder',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/transaction-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/transaction-proposals-dark.svg'
-              }
-            }
-          ]
-        }
-      ]
-    },
-    services: {
-      name: 'Services',
-      sections: [
-        {
-          title: 'Services',
-          items: [
-            {
-              id: 'security_audit-navbar',
-              title: 'Smart Contract Security Audit',
-              href: 'https://www.openzeppelin.com/security-audits',
-              description: 'Industry standard for securing smart contracts',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/sa-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/sa-nav-1.svg'
-              }
-            },
-            {
-              id: 'emergency_response-navbar',
-              title: 'Emergency Response',
-              href: 'https://www.openzeppelin.com/emergency-response',
-              description: 'React with expertise and speed',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/er-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/er-nav-1.svg'
-              }
-            },
-            {
-              id: 'zkp_practice-navbar',
-              title: 'ZKP Practice',
-              href: 'https://www.openzeppelin.com/zkp',
-              description: 'Scalability, Privacy, and Security',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/zkp-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/zkp-nav-1.svg'
-              }
-            }
-          ]
-        },
-        {
-          title: 'Solutions',
-          items: [
-            {
-              id: 'ecosystem_stack-navbar',
-              title: 'Ecosystem Stack',
-              href: 'https://www.openzeppelin.com/ecosystems',
-              description: 'Developer acquisition, accelerated',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/es-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/es-nav-1.svg'
-              }
-            }
-          ]
-        }
-      ]
-    },
-    resources: {
-      name: 'Resources',
-      sections: [
-        {
-          title: 'Resources',
-          items: [
-            {
-              id: 'documentation-navbar',
-              title: 'Documentation',
-              href: 'https://docs.openzeppelin.com/',
-              target: '_blank',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/docs-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/docs-nav-1.svg'
-              }
-            },
-            {
-              id: 'blog-navbar',
-              title: 'Blog',
-              href: 'https://blog.openzeppelin.com/',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/blog-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/blog-nav-1.svg'
-              }
-            },
-            {
-              id: 'forum-navbar',
-              title: 'Forum',
-              href: 'https://forum.openzeppelin.com/',
-              target: '_blank',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/forum-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/forum-nav-1.svg'
-              }
-            },
-            {
-              id: 'ethernaut-navbar',
-              title: 'Ethernaut CTF',
-              href: 'https://ethernaut.openzeppelin.com/',
-              target: '_blank',
-              icon: {
-                light: 'https://www.openzeppelin.com/hubfs/ethernaut-nav.svg',
-                dark: 'https://www.openzeppelin.com/hubfs/ethernaut-nav-1.svg'
-              }
-            }
-          ]
-        },
-        {
-          title: 'Company',
-          items: [
-            {
-              id: 'about-navbar',
-              title: 'About us',
-              href: 'https://www.openzeppelin.com/about'
-            },
-            {
-              id: 'careers-navbar',
-              title: 'Careers',
-              href: 'https://www.openzeppelin.com/careers'
-            },
-            {
-              id: 'security_center-navbar',
-              title: 'Security Center',
-              href: 'https://contracts.openzeppelin.com/security',
-              target: '_blank'
-            }
-          ]
-        }
-      ]
-    }
+    // products: {
+    //   name: 'Products',
+    //   sections: [
+    //     {
+    //       title: 'Open Source Tools',
+    //       items: [
+    //         {
+    //           id: 'contracts_library-navbar',
+    //           title: 'Contracts Library',
+    //           href: 'https://www.openzeppelin.com/solidity-contracts',
+    //           description: 'Secure smart contract templates',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/contracts-library-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/contracts-library-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'contracts_wizard-navbar',
+    //           title: 'Contracts Wizard',
+    //           href: 'https://wizard.openzeppelin.com/',
+    //           target: '_blank',
+    //           description: 'Interactive smart contract generator',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/contracts-wizard-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/wizard-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'upgrades_plugin-navbar',
+    //           title: 'Upgrades Plugin',
+    //           href: 'https://docs.openzeppelin.com/upgrades-plugins/1.x/',
+    //           target: '_blank',
+    //           description: 'Safe and easy smart contract upgrades',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/upgrade-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/upgrades-dark.svg'
+    //           }
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       title: 'Defender Cloud Services',
+    //       href: 'https://www.openzeppelin.com/defender',
+    //       items: [
+    //         {
+    //           id: 'relayers-navbar',
+    //           title: 'Relayers',
+    //           href: 'https://www.openzeppelin.com/defender#secure-operations',
+    //           description: 'Send reliable transactions via API',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/relayers-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/relayers-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'monitor-navbar',
+    //           title: 'Monitor',
+    //           href: 'https://www.openzeppelin.com/defender#secure-operations',
+    //           description: 'Gain visibility into your smart contracts',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/monitor-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/monitor-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'actions-navbar',
+    //           title: 'Actions',
+    //           href: 'https://www.openzeppelin.com/defender#actions',
+    //           description: 'Automate smart contract operations',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/actions-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/actions-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'access_control-navbar',
+    //           title: 'Access Control',
+    //           href: 'https://access-manager.openzeppelin.com/explorer/11155111',
+    //           target: '_blank',
+    //           description: 'Manage contract roles and permissions',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/access-control-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/acces-control-dark.svg'
+    //           }
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       title: '',
+    //       items: [
+    //         {
+    //           id: 'code_inspector-navbar',
+    //           title: 'Code Inspector',
+    //           href: 'https://www.openzeppelin.com/defender#secure-code',
+    //           description: 'Find and resolve smart contract vulnerabilities',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/code-inspector-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/code-inspector-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'deploy-navbar',
+    //           title: 'Deploy',
+    //           href: 'https://www.openzeppelin.com/defender#secure-deploy',
+    //           description: 'Launch and upgrade smart contracts safely',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/deploy-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/deploy-dark.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'transaction_proposals-navbar',
+    //           title: 'Transaction Proposals',
+    //           href: 'https://www.openzeppelin.com/defender#secure-operations',
+    //           description: 'Interactive transaction builder',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/transaction-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/transaction-proposals-dark.svg'
+    //           }
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
+    // services: {
+    //   name: 'Services',
+    //   sections: [
+    //     {
+    //       title: 'Services',
+    //       items: [
+    //         {
+    //           id: 'security_audit-navbar',
+    //           title: 'Smart Contract Security Audit',
+    //           href: 'https://www.openzeppelin.com/security-audits',
+    //           description: 'Industry standard for securing smart contracts',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/sa-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/sa-nav-1.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'emergency_response-navbar',
+    //           title: 'Emergency Response',
+    //           href: 'https://www.openzeppelin.com/emergency-response',
+    //           description: 'React with expertise and speed',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/er-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/er-nav-1.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'zkp_practice-navbar',
+    //           title: 'ZKP Practice',
+    //           href: 'https://www.openzeppelin.com/zkp',
+    //           description: 'Scalability, Privacy, and Security',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/zkp-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/zkp-nav-1.svg'
+    //           }
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       title: 'Solutions',
+    //       items: [
+    //         {
+    //           id: 'ecosystem_stack-navbar',
+    //           title: 'Ecosystem Stack',
+    //           href: 'https://www.openzeppelin.com/ecosystems',
+    //           description: 'Developer acquisition, accelerated',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/es-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/es-nav-1.svg'
+    //           }
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
+    // resources: {
+    //   name: 'Resources',
+    //   sections: [
+    //     {
+    //       title: 'Resources',
+    //       items: [
+    //         {
+    //           id: 'documentation-navbar',
+    //           title: 'Documentation',
+    //           href: 'https://docs.openzeppelin.com/',
+    //           target: '_blank',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/docs-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/docs-nav-1.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'blog-navbar',
+    //           title: 'Blog',
+    //           href: 'https://blog.openzeppelin.com/',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/blog-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/blog-nav-1.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'forum-navbar',
+    //           title: 'Forum',
+    //           href: 'https://forum.openzeppelin.com/',
+    //           target: '_blank',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/forum-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/forum-nav-1.svg'
+    //           }
+    //         },
+    //         {
+    //           id: 'ethernaut-navbar',
+    //           title: 'Ethernaut CTF',
+    //           href: 'https://ethernaut.openzeppelin.com/',
+    //           target: '_blank',
+    //           icon: {
+    //             light: 'https://www.openzeppelin.com/hubfs/ethernaut-nav.svg',
+    //             dark: 'https://www.openzeppelin.com/hubfs/ethernaut-nav-1.svg'
+    //           }
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       title: 'Company',
+    //       items: [
+    //         {
+    //           id: 'about-navbar',
+    //           title: 'About us',
+    //           href: 'https://www.openzeppelin.com/about'
+    //         },
+    //         {
+    //           id: 'careers-navbar',
+    //           title: 'Careers',
+    //           href: 'https://www.openzeppelin.com/careers'
+    //         },
+    //         {
+    //           id: 'security_center-navbar',
+    //           title: 'Security Center',
+    //           href: 'https://contracts.openzeppelin.com/security',
+    //           target: '_blank'
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // }
   };
 
   const toggleMenu = () => {
@@ -318,14 +318,15 @@ const Navbar: React.FC = () => {
             {/* Logo */}
             <div className="max-w-[160px] w-full mr-12">
               <div className="flex items-center">
-                <Link
+                <Link href="/">Safe Utils</Link>
+                {/* <Link
                   href="https://openzeppelin.com"
                   className="flex items-center"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <OZLogo />
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -440,7 +441,7 @@ const Navbar: React.FC = () => {
                       </Link>
                     )}
                   </Button>
-                  <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
+                  {/* <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
                     <a
                       href="https://github.com/openzeppelin/safe-utils"
                       target="_blank"
@@ -471,7 +472,7 @@ const Navbar: React.FC = () => {
                         className="dark:invert"
                       />
                     </a>
-                  </Button>
+                  </Button> */}
                   <ModeToggle />
                 </div>
               </nav>
@@ -639,7 +640,7 @@ const Navbar: React.FC = () => {
                     </a>
                     <ul className={`p-main-submenu grid transition-[grid-template-rows] duration-300 ${openSubmenu === 'company' ? 'grid-rows-[1fr] open' : 'grid-rows-[0fr]'}`}>
                       <div className="overflow-clip row-span-2">
-                        {navMenus.resources.sections[1].items.map((item) => (
+                        {navMenus.resources && navMenus.resources.sections[1].items.map((item) => (
                           <li key={item.id} className="p-main-submenu-item py-2">
                             <a
                               id={item.id}
