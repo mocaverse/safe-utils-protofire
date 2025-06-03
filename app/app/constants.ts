@@ -159,5 +159,20 @@ export const NETWORKS = [
       chainId: 1923,
       gnosisPrefix: "swell-l2",
       logo: "networks/swell.ico",
-    }
+    },
+    {
+      value: "zircuit-mainnet",
+      label: "Zircuit Mainnet",
+      chainId: 48900,
+      gnosisPrefix: "zircuit-mainnet",
+      logo: "networks/zircuit.ico",
+    },
+    {
+      value: "zircuit-testnet",
+      label: "Zircuit Testnet",
+      chainId: 48899,
+      gnosisPrefix: "zircuit-testnet",
+      logo: "networks/zircuit.ico",
+    },
+
   ];

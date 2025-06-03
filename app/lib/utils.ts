@@ -30,6 +30,9 @@ export const API_URLS: { [key: string]: string } = {
   zksync: "https://safe-transaction-zksync.safe.global",
   swell: "https://trx-swell.safe.protofire.io",
   "swell-testnet": "https://trx-swell-testnet.safe.protofire.io",
+  "zircuit-mainnet":"https://transaction.safe.zircuit.com",
+  "zircuit-testnet":"https://transaction-testnet.safe.zircuit.com"
+
 }
 
 export function isValidNetwork(network: string): boolean {
