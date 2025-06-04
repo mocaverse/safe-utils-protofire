@@ -10,7 +10,7 @@ import Navbar from '@/components/navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://safeutils.w3us.site'),
+  // metadataBase: new URL('https://safeutils.protofire.io'),
   title: 'Safe Utils',
   description: 'Preview and calculate Safe transaction hashes for EVM chains. Verify transaction signatures and domain hashes.',
   keywords: 'Safe, Gnosis Safe, transaction hash, Ethereum, multisig, blockchain, smart contract, EVM',
