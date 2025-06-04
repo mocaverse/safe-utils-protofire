@@ -31,7 +31,9 @@ export const API_URLS: { [key: string]: string } = {
   swell: "https://trx-swell.safe.protofire.io",
   "swell-testnet": "https://trx-swell-testnet.safe.protofire.io",
   "zircuit-mainnet":"https://transaction.safe.zircuit.com",
-  "zircuit-testnet":"https://transaction-testnet.safe.zircuit.com"
+  "zircuit-testnet":"https://transaction-testnet.safe.zircuit.com",
+  "harmony":"https://transaction.multisig.harmony.one",
+  "harmony-testnet":"https://transaction-testnet.multisig.harmony.one"
 
 }
 

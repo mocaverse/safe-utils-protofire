@@ -105,6 +105,8 @@ declare -A -r API_URLS=(
     ["swell-testnet"]="https://trx-swell-testnet.safe.protofire.io"
     ["zircuit-mainnet"]="https://transaction.safe.zircuit.com"
     ["zircuit-testnet"]="https://transaction-testnet.safe.zircuit.com"
+    ["harmony"]="https://transaction.multisig.harmony.one"
+    ["harmony-testnet"]="https://transaction-testnet.multisig.harmony.one"
 )
 
 # Define the chain IDs of the supported networks from the Safe transaction service.
@@ -134,6 +136,8 @@ declare -A -r CHAIN_IDS=(
     ["swell-testnet"]="1924"
     ["zircuit-mainnet"]="48900"
     ["zircuit-testnet"]="48899"
+    ["harmony"]="1666600000"
+    ["harmony-testnet"]="1666700000"
 )
 
 # Utility function to display the usage information.

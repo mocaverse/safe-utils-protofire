@@ -174,5 +174,18 @@ export const NETWORKS = [
       gnosisPrefix: "zircuit-testnet",
       logo: "networks/zircuit.ico",
     },
-
+    {
+      value: "harmony",
+      label: "Harmony",
+      chainId: 1666600000,
+      gnosisPrefix: "hmy",
+      logo: "networks/harmony.ico",
+    },
+    {
+      value: "harmony-testnet",
+      label: "Harmony Testnet",
+      chainId: 1666700000,
+      gnosisPrefix: "hmyt",
+      logo: "networks/harmony.ico",
+    },
   ];
