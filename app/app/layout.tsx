@@ -10,29 +10,29 @@ import Navbar from '@/components/navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://safeutils.openzeppelin.com'),
-  title: 'Safe Utils | OpenZeppelin',
-  description: 'Preview and calculate Safe transaction hashes for Ethereum and other EVM chains. Verify transaction signatures and domain hashes.',
+  metadataBase: new URL('https://safeutils.w3us.site'),
+  title: 'Safe Utils',
+  description: 'Preview and calculate Safe transaction hashes for EVM chains. Verify transaction signatures and domain hashes.',
   keywords: 'Safe, Gnosis Safe, transaction hash, Ethereum, multisig, blockchain, smart contract, EVM',
   authors: [{ name: 'OpenZeppelin' }],
   openGraph: {
-    title: 'Safe Utils | OpenZeppelin',
-    description: 'Preview and calculate Safe transaction hashes for Ethereum and other EVM chains',
+    title: 'Safe Utils',
+    description: 'Preview and calculate Safe transaction hashes for EVM chains',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: '/thumbnail.png',
+        url: '/thumbnail-safe-utils.png',
         width: 1200,
         height: 630,
-        alt: 'OpenZeppelin Safe Utils',
+        alt: 'Safe Utils',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Safe Utils | OpenZeppelin',
-    description: 'Preview and calculate Safe transaction hashes for Ethereum and other EVM chains',
+    title: 'Safe Utils',
+    description: 'Preview and calculate Safe transaction hashes for EVM chains',
     images: ['/thumbnail.png'],
   },
 }
