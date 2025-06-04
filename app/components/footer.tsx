@@ -13,7 +13,14 @@ export function Footer() {
             rel="noopener noreferrer"
             className="font-medium text-black dark:text-white underline underline-offset-4 hover:text-black/80 dark:hover:text-white/80"
           >forked
-          </a>version of Safe Utils website. Source is developed by{" "}
+          </a>version of           
+          <a
+            href="https://github.com/OpenZeppelin/safe-utils"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-black dark:text-white underline underline-offset-4 hover:text-black/80 dark:hover:text-white/80"
+          >Safe Utils
+          </a> website, licensed under AGPL-3.0 / Original authors: {" "}
           <a
             href="https://www.openzeppelin.com/"
             target="_blank"

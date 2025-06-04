@@ -159,6 +159,7 @@ export const NETWORKS = [
       chainId: 1924,
       gnosisPrefix: "swell-l2-testnet",
       logo: "networks/swell-testnet.ico",
+      testnet: true,
     },
     {
       value: "zircuit-mainnet",
@@ -173,6 +174,7 @@ export const NETWORKS = [
       chainId: 48899,
       gnosisPrefix: "zircuit-testnet",
       logo: "networks/zircuit.ico",
+      testnet: true,
     },
     {
       value: "harmony",
@@ -187,5 +189,6 @@ export const NETWORKS = [
       chainId: 1666700000,
       gnosisPrefix: "hmyt",
       logo: "networks/harmony.ico",
+      testnet: true,
     },
   ];
