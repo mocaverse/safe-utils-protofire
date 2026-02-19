@@ -107,6 +107,8 @@ declare -A -r API_URLS=(
     ["zircuit-testnet"]="https://transaction-testnet.safe.zircuit.com"
     ["harmony"]="https://transaction.multisig.harmony.one"
     ["harmony-testnet"]="https://transaction-testnet.multisig.harmony.one"
+    ["moca-mainnet"]="https://transaction-mocachain.safe.protofire.io"
+    ["moca-testnet"]="https://transaction-mocachain-testnet.safe.protofire.io"
 )
 
 # Define the chain IDs of the supported networks from the Safe transaction service.
@@ -138,6 +140,8 @@ declare -A -r CHAIN_IDS=(
     ["zircuit-testnet"]="48899"
     ["harmony"]="1666600000"
     ["harmony-testnet"]="1666700000"
+    ["moca-mainnet"]="2288"
+    ["moca-testnet"]="222888"
 )
 
 # Utility function to display the usage information.

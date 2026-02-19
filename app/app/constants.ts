@@ -191,4 +191,19 @@ export const NETWORKS = [
       logo: "networks/harmony.ico",
       testnet: true,
     },
+    {
+      value: "moca-mainnet",
+      label: "Moca Chain Mainnet",
+      chainId: 2288,
+      gnosisPrefix: "moca",
+      logo: "networks/moca.ico",
+    },
+    {
+      value: "moca-testnet",
+      label: "Moca Chain Testnet",
+      chainId: 222888,
+      gnosisPrefix: "mocat",
+      logo: "networks/moca.ico",
+      testnet: true,
+    },
   ];
