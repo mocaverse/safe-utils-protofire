@@ -85,7 +85,8 @@ declare -A -r API_URLS=(
     ["avalanche"]="https://safe-transaction-avalanche.safe.global"
     ["base"]="https://safe-transaction-base.safe.global"
     ["base-sepolia"]="https://safe-transaction-base-sepolia.safe.global"
-    ["blast"]="https://safe-transaction-blast.safe.global"
+    ["blast"]="https://transaction-blast.safe.protofire.io"
+    ["blast-sepolia"]="https://transaction-blast-testnet.safe.protofire.io"
     ["bsc"]="https://safe-transaction-bsc.safe.global"
     ["celo"]="https://safe-transaction-celo.safe.global"
     ["ethereum"]="https://safe-transaction-mainnet.safe.global"
@@ -109,6 +110,17 @@ declare -A -r API_URLS=(
     ["harmony-testnet"]="https://transaction-testnet.multisig.harmony.one"
     ["moca-mainnet"]="https://transaction-mocachain.safe.protofire.io"
     ["moca-testnet"]="https://transaction-mocachain-testnet.safe.protofire.io"
+    ["plasma"]="https://transaction-plasma.safe.protofire.io"
+    ["plasma-testnet"]="https://transaction-plasma-testnet.safe.protofire.io"
+    ["wemix"]="https://transaction-wemix.safe.protofire.io"
+    ["wemix-testnet"]="https://transaction-wemix-testnet.safe.protofire.io"
+    ["mantrachain"]="https://transaction-mantra.safe.protofire.io"
+    ["mantrachain-dukong"]="https://transaction-mantra-testnet.safe.protofire.io"
+    ["alpen"]="https://transaction-alpen-testnet.safe.protofire.io"
+    ["ault-testnet"]="https://transaction-ault-testnet.safe.protofire.io"
+    ["dogeos-chykyu"]="https://transaction-dogeos-testnet.safe.protofire.io"
+    ["hoodi-testnet"]="https://transaction-ethereum-hoodi.safe.protofire.io"
+    ["tempo-testnet"]="https://transaction-tempo-testnet.safe.protofire.io"
 )
 
 # Define the chain IDs of the supported networks from the Safe transaction service.
@@ -119,6 +131,7 @@ declare -A -r CHAIN_IDS=(
     ["base"]="8453"
     ["base-sepolia"]="84532"
     ["blast"]="81457"
+    ["blast-sepolia"]="168587773"
     ["bsc"]="56"
     ["celo"]="42220"
     ["ethereum"]="1"
@@ -142,6 +155,17 @@ declare -A -r CHAIN_IDS=(
     ["harmony-testnet"]="1666700000"
     ["moca-mainnet"]="2288"
     ["moca-testnet"]="222888"
+    ["plasma"]="9745"
+    ["plasma-testnet"]="9746"
+    ["wemix"]="1111"
+    ["wemix-testnet"]="1112"
+    ["mantrachain"]="5888"
+    ["mantrachain-dukong"]="5887"
+    ["alpen"]="8150"
+    ["ault-testnet"]="10904"
+    ["dogeos-chykyu"]="6281971"
+    ["hoodi-testnet"]="560048"
+    ["tempo-testnet"]="42431"
 )
 
 # Utility function to display the usage information.
