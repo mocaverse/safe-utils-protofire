@@ -37,7 +37,7 @@ export function NetworksProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const registryUrl = process.env.NEXT_PUBLIC_REGISTRY_URL;
+    const registryUrl = process.env.NEXT_PUBLIC_REGISTRY_CHAINS_URL;
     if (!registryUrl) return;
 
     const controller = new AbortController();
