@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { UseFormReturn } from "react-hook-form";
 import { FormData } from "@/types/form-types";
-import { NETWORKS } from "@/app/constants";
+import { useNetworks } from "@/context/networks-context";
+
+function getLogoSrc(logo: string): string {
+  if (logo.startsWith("https://")) return logo;
+  return `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/${logo}`;
+}
+
 import {
   FormField,
   FormItem,
@@ -26,6 +32,7 @@ interface ApiInputFieldsProps {
 
 export default function ApiInputFields({ form }: ApiInputFieldsProps) {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const { networks } = useNetworks();
 
   const handleTooltipToggle = (id: string) => {
     setActiveTooltip(activeTooltip === id ? null : id);
@@ -42,7 +49,7 @@ export default function ApiInputFields({ form }: ApiInputFieldsProps) {
             <Select
               onValueChange={(value) => {
                 field.onChange(value);
-                const selectedNetwork = NETWORKS.find(
+                const selectedNetwork = networks.find(
                   (network) => network.value === value
                 );
                 if (selectedNetwork) {
@@ -57,24 +64,24 @@ export default function ApiInputFields({ form }: ApiInputFieldsProps) {
                     {field.value && (
                       <div className="flex items-center">
                         <img
-                          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/${
-                            NETWORKS.find((network) => network.value === field.value)?.logo
-                          }`}
+                          src={getLogoSrc(
+                            networks.find((network) => network.value === field.value)?.logo || ""
+                          )}
                           alt={`${field.value} logo`}
                           className="w-5 h-5 mr-2"
                         />
-                        {NETWORKS.find((network) => network.value === field.value)?.label}
+                        {networks.find((network) => network.value === field.value)?.label}
                       </div>
                     )}
                   </SelectValue>
                 </SelectTrigger>
               </FormControl>
               <SelectContent>
-                {NETWORKS.map((network) => (
+                {networks.map((network) => (
                   <SelectItem key={network.value} value={network.value}>
                     <div className="flex items-center">
                       <img
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/${network.logo}`}
+                        src={getLogoSrc(network.logo)}
                         alt={`${network.label} logo`}
                         className="w-5 h-5 mr-2"
                       />
@@ -106,7 +113,7 @@ export default function ApiInputFields({ form }: ApiInputFieldsProps) {
                 onChange={(e) => {
                   const value = parseInt(e.target.value);
                   field.onChange(value);
-                  const selectedNetwork = NETWORKS.find(
+                  const selectedNetwork = networks.find(
                     (network) => network.chainId === value
                   );
                   if (selectedNetwork) {
