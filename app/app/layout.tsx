@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Navbar from '@/components/navbar'
-import { ClientProviders } from '@/components/ClientProviders'
+import { NetworksProvider } from '@/context/networks-context'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ClientProviders>
+          <NetworksProvider>
             <TooltipProvider>
               <div className="min-h-screen flex flex-col bg-gradient-main dark:bg-gradient-main-dark">
                 <div className="flex flex-col flex-grow">
@@ -59,7 +59,7 @@ export default function RootLayout({
                 <Footer />
               </div>
             </TooltipProvider>
-          </ClientProviders>
+          </NetworksProvider>
           <GoogleAnalytics gaId="G-SY66CZ3XZT" />
         </ThemeProvider>
       </body>

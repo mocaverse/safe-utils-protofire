@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import { UseFormReturn } from "react-hook-form";
 import { FormData } from "@/types/form-types";
 import { useNetworks } from "@/context/networks-context";
-
-function getLogoSrc(logo: string): string {
-  if (logo.startsWith("https://")) return logo;
-  return `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/${logo}`;
-}
+import { getLogoSrc } from "@/lib/utils";
 
 import { 
   FormField, 
@@ -32,7 +28,7 @@ interface BasicInfoStepProps {
 
 export default function BasicInfoStep({ form }: BasicInfoStepProps) {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
-  const { networks } = useNetworks();
+  const { networks, isLoading } = useNetworks();
 
   const handleTooltipToggle = (id: string) => {
     setActiveTooltip(activeTooltip === id ? null : id);
@@ -60,6 +56,7 @@ export default function BasicInfoStep({ form }: BasicInfoStepProps) {
                 }
               }}
               value={field.value}
+              disabled={isLoading}
             >
               <FormControl>
                 <SelectTrigger>
