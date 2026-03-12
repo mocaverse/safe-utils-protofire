@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { UseFormReturn } from "react-hook-form";
 import { FormData } from "@/types/form-types";
-import { NETWORKS } from "@/app/constants";
+import { useNetworks } from "@/context/networks-context";
+import { getLogoSrc } from "@/lib/utils";
+
 import { 
   FormField, 
   FormItem, 
@@ -26,6 +28,7 @@ interface BasicInfoStepProps {
 
 export default function BasicInfoStep({ form }: BasicInfoStepProps) {
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
+  const { networks, isLoading } = useNetworks();
 
   const handleTooltipToggle = (id: string) => {
     setActiveTooltip(activeTooltip === id ? null : id);
@@ -45,7 +48,7 @@ export default function BasicInfoStep({ form }: BasicInfoStepProps) {
             <Select
               onValueChange={(value) => {
                 field.onChange(value);
-                const selectedNetwork = NETWORKS.find(
+                const selectedNetwork = networks.find(
                   (network) => network.value === value
                 );
                 if (selectedNetwork) {
@@ -53,6 +56,7 @@ export default function BasicInfoStep({ form }: BasicInfoStepProps) {
                 }
               }}
               value={field.value}
+              disabled={isLoading}
             >
               <FormControl>
                 <SelectTrigger>
@@ -60,17 +64,14 @@ export default function BasicInfoStep({ form }: BasicInfoStepProps) {
                     {field.value && (
                       <div className="flex items-center">
                         <img
-                          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/${
-                            NETWORKS.find(
-                              (network) =>
-                                network.value === field.value
-                            )?.logo
-                          }`}
+                          src={getLogoSrc(
+                            networks.find((network) => network.value === field.value)?.logo || ""
+                          )}
                           alt={`${field.value} logo`}
                           className="w-5 h-5 mr-2"
                         />
                         {
-                          NETWORKS.find(
+                          networks.find(
                             (network) => network.value === field.value
                           )?.label
                         }
@@ -80,14 +81,14 @@ export default function BasicInfoStep({ form }: BasicInfoStepProps) {
                 </SelectTrigger>
               </FormControl>
               <SelectContent>
-                {NETWORKS.map((network) => (
+                {networks.map((network) => (
                   <SelectItem
                     key={network.value}
                     value={network.value}
                   >
                     <div className="flex items-center">
                       <img
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/${network.logo}`}
+                        src={getLogoSrc(network.logo)}
                         alt={`${network.label} logo`}
                         className="w-5 h-5 mr-2"
                       />
@@ -116,7 +117,7 @@ export default function BasicInfoStep({ form }: BasicInfoStepProps) {
                 onChange={(e) => {
                   const value = parseInt(e.target.value);
                   field.onChange(value);
-                  const selectedNetwork = NETWORKS.find(
+                  const selectedNetwork = networks.find(
                     (network) => network.chainId === value
                   );
                   if (selectedNetwork) {
