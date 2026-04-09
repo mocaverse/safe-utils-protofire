@@ -10,7 +10,7 @@ permissions:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    environment: Release
+    environment: mainnet
     permissions:
       id-token: write
       contents: read
