@@ -30,6 +30,12 @@ export const API_URLS: { [key: string]: string } = {
   zksync: "https://safe-transaction-zksync.safe.global",
   swell: "https://trx-swell.safe.protofire.io",
   "swell-testnet": "https://trx-swell-testnet.safe.protofire.io",
+  "zircuit-mainnet":"https://transaction.safe.zircuit.com",
+  "zircuit-testnet":"https://transaction-testnet.safe.zircuit.com",
+  "harmony":"https://transaction.multisig.harmony.one",
+  "harmony-testnet":"https://transaction-testnet.multisig.harmony.one",
+  "moca-mainnet":"https://transaction-mocachain.safe.protofire.io",
+  "moca-testnet":"https://transaction-mocachain-testnet.safe.protofire.io"
 }
 
 export function isValidNetwork(network: string): boolean {

@@ -78,6 +78,22 @@ export default function HowItWorks() {
             Safe transaction service API and computing the hashes using the
             EIP-712 standard.
           </p>
+          <p className="mt-4 text-yellow-800 dark:text-yellow-200">
+            This is a <a
+            href="https://github.com/protofire/safe-utils/tree/production"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-yellow-800 dark:text-yellow-200 underline underline-offset-4 hover:text-black/80 dark:hover:text-white/80"
+          >forked
+          </a> version of the official{" "}
+          <a
+            href="https://github.com/OpenZeppelin/safe-utils"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-yellow-800 dark:text-yellow-200 underline underline-offset-4 hover:text-black/80 dark:hover:text-white/80"
+          >Safe Utils
+          </a> application (licensed under AGPL-3.0). 
+          </p>
         </CardContent>
       </Card>
 
