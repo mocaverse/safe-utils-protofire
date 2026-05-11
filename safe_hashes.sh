@@ -103,6 +103,12 @@ declare -A -r API_URLS=(
     ["zksync"]="https://safe-transaction-zksync.safe.global"
     ["swell"]="https://trx-swell.safe.protofire.io"
     ["swell-testnet"]="https://trx-swell-testnet.safe.protofire.io"
+    ["zircuit-mainnet"]="https://transaction.safe.zircuit.com"
+    ["zircuit-testnet"]="https://transaction-testnet.safe.zircuit.com"
+    ["harmony"]="https://transaction.multisig.harmony.one"
+    ["harmony-testnet"]="https://transaction-testnet.multisig.harmony.one"
+    ["moca-mainnet"]="https://transaction-mocachain.safe.protofire.io"
+    ["moca-testnet"]="https://transaction-mocachain-testnet.safe.protofire.io"
 )
 
 # Define the chain IDs of the supported networks from the Safe transaction service.
@@ -130,6 +136,12 @@ declare -A -r CHAIN_IDS=(
     ["zksync"]="324"
     ["swell"]="1923"
     ["swell-testnet"]="1924"
+    ["zircuit-mainnet"]="48900"
+    ["zircuit-testnet"]="48899"
+    ["harmony"]="1666600000"
+    ["harmony-testnet"]="1666700000"
+    ["moca-mainnet"]="2288"
+    ["moca-testnet"]="222888"
 )
 
 # Utility function to display the usage information.
