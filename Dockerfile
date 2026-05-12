@@ -21,7 +21,13 @@ FROM node:20-slim AS runner
 WORKDIR /app
 
 # Install system dependencies and Foundry (for cast and chisel)
-RUN apt-get update && apt-get install -y \
+ARG TARGETARCH
+RUN TARGET_ARCH="${TARGETARCH:-amd64}" \
+    && case "${TARGET_ARCH}" in \
+      amd64|arm64) echo "Building runtime image for ${TARGET_ARCH}" ;; \
+      *) echo "Unsupported target architecture: ${TARGET_ARCH}" && exit 1 ;; \
+    esac \
+    && apt-get update && apt-get install -y \
     curl \
     git \
     jq \
